@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+   <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+<Manager className="org.apache.catalina.session.PersistentManager"
+                saveOnRestart="true"
+                maxActiveSessions="-1"
+                minIdleSwap="-1"
+                maxIdleSwap="-1"
+                maxIdleBackup="0">
+
+        <Store className="kutuni.tomcat.HCStore"
+                newInstance="false" 
+				instanceName="hvlcm1"
+                grupName="dev"
+                grupPassword="dev"
+                multicast="true"
+                networkInterface="127.0.0.1" 
+                port="5702"
+                log="true" />
+        </Manager>
+</Context>
